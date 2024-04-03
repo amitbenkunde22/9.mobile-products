@@ -1,0 +1,57 @@
+<ul class="nav nav-pills mb-4">
+    <li class="nav-item">
+        <a href="javascript:;"
+        data-framework='angular'
+        (click)="selectedFrameWork = 'angular'"
+        [ngClass]="{
+            active : selectedFrameWork === 'angular'
+        }"
+        class="nav-link active">Angular</a>
+    </li>
+    <li class="nav-item"><a href="javascript:;"
+        data-framework='react'
+        (click)="selectedFrameWork = 'react'"
+        [ngClass]="{
+            active : selectedFrameWork === 'react'
+        }"
+        class="nav-link">React</a>
+    </li>
+    <li class="nav-item"><a href="javascript:;" 
+        data-framework='vue'
+        (click)="selectedFrameWork = 'vue'"
+        [ngClass]="{
+            active : selectedFrameWork === 'vue'
+        }"
+        class="nav-link">Vue</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="card" *ngIf="selectedFrameWork === 'angular'">
+        <div class="card-body">
+            <strong>
+                Angular
+            </strong>
+            Angular is a development platform, built on TypeScript. 
+            As a platform, Angular includes, 
+            A component-based framework for building scalable web applications
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedFrameWork === 'react'">
+        <div class="card-body">
+            <strong>
+                React
+            </strong>
+            It is a a development server that uses Webpack to compile React, JSX, and ES6, auto-prefix CSS files
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedFrameWork === 'vue'">
+        <div class="card-body">
+            <strong>
+                Vue
+            </strong>
+            Vue (pronounced like view) is a JavaScript framework for building user interfaces. 
+            It builds on top of standard HTML, CSS, and JavaScript 
+        </div>
+    </div>
+</div>
