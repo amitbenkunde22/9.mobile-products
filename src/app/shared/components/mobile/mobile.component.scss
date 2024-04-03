@@ -1,0 +1,25 @@
+.imageContainer{
+    height: 300px;
+    
+
+    img{
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .noImage{
+        height: 100%;
+        border: 1px solid #ededed;
+        background-color: #ccc;
+    }
+}
+span{
+    border-radius: 4px;
+}
+.text{
+    font-size: 20px;
+}
+// .notAvailable{
+//     filter: blur(.5px) grayscale(1);
+// }

@@ -1,0 +1,32 @@
+<p
+[ngStyle] = "{
+    backgroundColor : this.productStatus ? 'orange' : '#ccc'
+}"
+
+[ngClass] = "{
+    'text-white' : productStatus,
+    'text-danger' : !productStatus,
+    'p-4' : productStatus,
+    'p-3' : !productStatus
+}"
+>The Product is {{productName}} with id {{productId}} and 
+    <strong *ngIf="productStatus ; else outOfStock">Product is available</strong>
+    <ng-template #outOfStock>
+        <strong> Product is out of Stock</strong>
+    </ng-template>
+    
+</p>
+
+<!-- <strong [innerHTML]="productName"></strong> -->
+<!-- <br> -->
+<!-- <strong [innerHTML]="'Iphone'"></strong> -->
+
+<!-- <div>
+    {{resp}}
+</div>
+==> <p class="alert alert-info">I love Angular</p>-->
+<!-- <div [innerHTML] = "resp"></div>
+
+<input type="text" [value]="userName" class="form-control">
+<br>
+<img [src]="imgUrl" class="img-fluid" height="200px" width="200px"> -->
