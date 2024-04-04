@@ -1,0 +1,19 @@
+<ul class=" nav nav-pills mb-4">
+    <li class="nav-items" *ngFor="let tab of tabArr">
+        <a href="javascript:;"
+        [ngClass]="{
+          active : selectedFrameWork === tab.tabTitle
+        }"
+        (click)="selectedFrameWork === tab.tabTitle"
+        class="nav-link">
+            {{tab.tabTitle}}
+        </a>
+    </li>
+</ul>
+<div class="card mb-4" *ngFor="let tab of tabArr">
+  <div *ngIf="selectedFrameWork === tab.tabTitle">
+    <div class="card-body" [innerHTML]="tab.tabContent">
+
+    </div>
+  </div>
+</div>
